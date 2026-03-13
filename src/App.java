@@ -7,7 +7,7 @@ public class App {
 
     public static void main(String[] args) {
 
-        String url = "jdbc:h2:C:/Users/andre/test";
+        String url = "jdbc:h2:./banco/test";
         String user = "sa";
         String password = "";
 

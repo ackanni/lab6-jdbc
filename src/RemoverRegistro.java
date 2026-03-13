@@ -4,7 +4,7 @@ public class RemoverRegistro {
 
     public static void main(String[] args) {
 
-        String url = "jdbc:h2:C:/Users/andre/test";
+        String url = "jdbc:h2:C:./banco/test";
         String user = "sa";
         String password = "";
 
@@ -13,11 +13,17 @@ public class RemoverRegistro {
             Connection conn = DriverManager.getConnection(url, user, password);
             Statement stmt = conn.createStatement();
 
+            // remover crachá primeiro
+            stmt.executeUpdate(
+                "DELETE FROM cracha WHERE funcionario_id = 2"
+            );
+
+            // depois remover funcionário
             stmt.executeUpdate(
                 "DELETE FROM funcionarios WHERE id = 2"
             );
 
-            System.out.println("Funcionário removido!");
+            System.out.println("Funcionário e crachá removidos!");
 
             conn.close();
 
