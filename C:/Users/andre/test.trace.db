@@ -1,0 +1,3 @@
+2026-03-12 22:03:00.453772Z jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "FUNCIONARIOS" not found (this database is empty); SQL statement:
+SELECT f.id, f.nome, f.cargo, c.codigo FROM funcionarios f JOIN cracha c ON f.id = c.funcionario_id [42104-224]
